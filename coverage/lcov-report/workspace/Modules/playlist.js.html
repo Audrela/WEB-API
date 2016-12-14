@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for workspace/Modules/playlist.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">workspace/Modules/</a> playlist.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">13.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/50</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+'use strict'
+&nbsp;
+const storage = require('node-persist')  // use basic file-based data persistence
+&nbsp;
+const playlistConnection = require('./database').playlistConnection
+&nbsp;
+exports.validate = <span class="fstat-no" title="function not covered" >function validate(req, res, next) {</span>
+<span class="cstat-no" title="statement not covered" >	const playlist = req.body</span>
+<span class="cstat-no" title="statement not covered" >	if (!playlist) <span class="cstat-no" title="statement not covered" >return res.send(400, {Message: 'Need to send some data'})</span></span>
+<span class="cstat-no" title="statement not covered" >	if (!playlist.id || !playlist.artist || !playlist.track) <span class="cstat-no" title="statement not covered" >return res.send(400, {Message: 'Missing components: id, artist or track'})</span></span>
+&nbsp;
+	// TODO: you would also want to ensure no *extra* fields are sent (or ignore them in the methods below)
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	next()</span>
+}
+&nbsp;
+exports.list = <span class="fstat-no" title="function not covered" >function list(req, res) {</span>
+	// get all the books saved in the user's list
+<span class="cstat-no" title="statement not covered" >	playlistConnection(req, res, playlists =&gt; <span class="cstat-no" title="statement not covered" >res.send({playlist: playlists.values()}))</span></span>
+}
+&nbsp;
+exports.add = <span class="fstat-no" title="function not covered" >function add(req, res) {</span>
+&nbsp;
+	// connect to the favourites DB then save the given book
+<span class="cstat-no" title="statement not covered" >	playlistConnection(req, res, playlists =&gt; {</span>
+&nbsp;
+		// first check that the id is not used already
+<span class="cstat-no" title="statement not covered" >		const list = req.body</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		if (playlists.getItemSync(list.id)) <span class="cstat-no" title="statement not covered" >return res.send(400, {message: 'id already exists', id: list.id})</span></span>
+&nbsp;
+		// TODO: omit the fields you don't want to save from book, before saving
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		playlists.setItem(list.id, list, err =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if (err) {</span>
+<span class="cstat-no" title="statement not covered" >				console.log(err)</span>
+<span class="cstat-no" title="statement not covered" >				return res.send(500, {message: 'Could not add to playlist', list: list})</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				return res.send(201, {message: 'Added to playlist', list: list})</span>
+			}
+		})
+	})
+}
+&nbsp;
+exports.get = <span class="fstat-no" title="function not covered" >function get (req, res, next) {</span>
+	// use the ID in the URL to look up a particular favourite
+<span class="cstat-no" title="statement not covered" >	const trackid = req.params.id</span>
+&nbsp;
+	// connect to the favourites DB then get the requested book
+<span class="cstat-no" title="statement not covered" >	playlistConnection(req, res, playlists =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		playlists.getItem(trackid, (err, book) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >return res.send(500, {message: 'Couldnt get the playlist'})</span></span>
+&nbsp;
+			// book will be undefined if there was no match
+<span class="cstat-no" title="statement not covered" >			if (!book) <span class="cstat-no" title="statement not covered" >return res.send(404, {message: 'id not found', id: trackid})</span></span>
+			
+			// otherwise return the book object
+<span class="cstat-no" title="statement not covered" >			res.send({favourite: trackid})</span>
+		})
+	})
+}
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+																	/// UPDATING \\\
+exports.update = <span class="fstat-no" title="function not covered" >function updateItem (req, res, next) {</span>
+	// use the ID in the URL to ensure the fav exists, then overwrite it
+<span class="cstat-no" title="statement not covered" >	res.setHeader('content-type', 'application/json')</span>
+<span class="cstat-no" title="statement not covered" >	res.setHeader('Allow', 'GET, PUT')</span>
+	
+<span class="cstat-no" title="statement not covered" >	playlistConnection(req, res, playlists =&gt; {</span>
+		// first check that the id is not used already
+<span class="cstat-no" title="statement not covered" >		const list = req.body</span>
+		
+<span class="cstat-no" title="statement not covered" >		if (playlists.removeItemSync(list.id)) <span class="cstat-no" title="statement not covered" >return res.send(400, {message: 'Playlist updated', id: list.id})</span></span>
+<span class="cstat-no" title="statement not covered" >		playlists.removeItem(list.id, list, err =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if(err) <span class="cstat-no" title="statement not covered" >return res.send(404, {Message: 'delete error'}, null)</span></span>
+		})
+	})
+	
+<span class="cstat-no" title="statement not covered" >		playlistConnection(req, res, playlists =&gt; {</span>
+&nbsp;
+		// first check that the id is not used already
+<span class="cstat-no" title="statement not covered" >		const list = req.body</span>
+&nbsp;
+		// TODO: omit the fields you don't want to save from book, before saving
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		playlists.setItem(list.id, list, err =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if (err) {</span>
+<span class="cstat-no" title="statement not covered" >				console.log(err)</span>
+<span class="cstat-no" title="statement not covered" >				return res.send(500, {list: list})</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				return res.send(201, {list: list})</span>
+			}
+		})
+	})
+	
+}
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+exports.deleteItem = <span class="fstat-no" title="function not covered" >function deleteItem (req, res, next) {</span>
+	// use the ID in the URL to remove a specific fav, silently fail if it doesn't exist
+<span class="cstat-no" title="statement not covered" >	res.setHeader('content-type', 'application/json')</span>
+<span class="cstat-no" title="statement not covered" >	res.setHeader('Allow', 'GET, POST, DELETE')</span>
+	
+	
+<span class="cstat-no" title="statement not covered" >	playlistConnection(req, res, playlists =&gt; {</span>
+		// first check that the id is not used already
+		
+<span class="cstat-no" title="statement not covered" >		const list = req.body</span>
+		
+<span class="cstat-no" title="statement not covered" >		if (playlists.removeItemSync(list.id)) <span class="cstat-no" title="statement not covered" >return res.send(400, {message: 'Playlist deleted', id: list.id})</span></span>
+<span class="cstat-no" title="statement not covered" >		playlists.removeItem(list.id, list, err =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if(err) <span class="cstat-no" title="statement not covered" >return res.send(404, {Message: 'Playlist deleted'}, deleteItem.item)</span></span>
+<span class="cstat-no" title="statement not covered" >		res.send(500, {message: 'Playlist empty'})</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.parse(list)).item</span>
+		})
+	})
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Dec 07 2016 06:11:59 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

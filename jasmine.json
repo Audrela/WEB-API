@@ -1,0 +1,8 @@
+{
+	"spec_files": [
+		"playlist-spec.js"
+	],
+	"helpers": [
+		"helpers/**/*.js"
+	]
+}
