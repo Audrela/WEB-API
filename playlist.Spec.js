@@ -27,7 +27,8 @@ exports.addItem = function(data) {
 exports.removeItem = function (data) {
 	if (storage.getItemSync(data.id)) {
 		return false
-	} else {
+	} 
+	else {
 		storage.removeItem(data.id, data)
 		return true
 	}
@@ -37,7 +38,8 @@ exports.updateItem = function (data) {
 	if(storage.getItemSync(data.id) !== undefined) {
 		return false
 	} else {
-		storage.updateItem(data.id, data)
-		return false
+		storage.updateItemSync(data.id)
+		return true
 	}
+	
 }

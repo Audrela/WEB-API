@@ -6,7 +6,7 @@ const music = require('./Modules/music')
 const playlist = require('./Modules/playlist')
 const authentification = require('./Modules/authentification')
 const users = require('./Modules/users')
-
+const defaultPort = 8081
 
 
 server.use(restify.fullResponse())
@@ -28,5 +28,5 @@ server.post('/users', users.validateUser, users.add)  // add a new user to the D
 server.post('/users/confirm/:username', users.validateCode, users.confirm)	//Confirm user using confirmation code
 server.del('/users/:username', authentification.authorize, users.delete)  // delete a user
 
-const port = process.env.PORT || 8081
+const port = process.env.port || defaultPort
 server.listen(port, err => console.log(err || `App running on port ${port}`))
